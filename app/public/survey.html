@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+<!-- jQuery -->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!-- bootstrap -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
+<!-- link to javascript code -->
+<script src="  "></script>
+
+<title>Friend Finder</title>
+</head>
+
+<body>
+
+<div class ="container">
+<div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6" id="surveyHeader">Survey Questions</div>
+        <div class="col-md-3"></div>  
+</div>
+
+<div>
+About You <br>
+    <form>
+        Name (Required)<br>
+        <input type="text" id="name" required/>
+        <br>
+        Link to Photo (Required):<br>
+        <input type="text" id="photo" required/>
+
+        <div>
+                <div class="form-group">
+                    <label for="exampleFormControlSelect1">Question 1:
+                        <br> 
+                        Your mind is always buzzing with unexplored ideas and plans.
+                    </label>
+                    <select class="form-control" id="q1">
+                        <option>1 Strongly Disagree</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 Strongly Agree</option>
+                    </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 2:
+                        <br> 
+                        Generally speaking, you rely more on your experience than your imagination.
+                    </label>
+                    <select class="form-control" id="q2">
+                        <option>1 Strongly Disagree</option>
+                        <option>2</option>
+                        <option>3</option>
+                        <option>4</option>
+                        <option>5 Strongly Agree</option>
+                    </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 3:
+                            <br> 
+                            You find it easy to stay relaxed and focused even when there is some pressure.
+                        </label>
+                        <select class="form-control" id="q3">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 4:
+                            <br> 
+                            You rarely do something just out of sheer curiosity.
+                        </label>
+                        <select class="form-control" id="q4">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 5:
+                            <br> 
+                            People can rarely upset you.
+                        </label>
+                        <select class="form-control" id="q5">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                        </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 6:
+                            <br> 
+                            It is often difficult for you to relate to other people’s feelings.
+                        </label>
+                        <select class="form-control" id="q6">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                    </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 7:
+                            <br> 
+                            In a discussion, truth should be more important than people’s sensitivities.
+                        </label>
+                        <select class="form-control" id="q7">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                    </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 8:
+                            <br> 
+                            You rarely get carried away by fantasies and ideas.
+                        </label>
+                        <select class="form-control" id="q8">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                    </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 9:
+                            <br>
+                            You think that everyone’s views should be respected regardless of whether they are supported by facts or not. 
+                        </label>
+                        <select class="form-control" id="q9">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                    </select><br>
+                
+                    <label for="exampleFormControlSelect1">Question 10:
+                            <br> 
+                            You feel more energetic after spending time with a group of people.
+                        </label>
+                        <select class="form-control" id="q10">
+                            <option>1 Strongly Disagree</option>
+                            <option>2</option>
+                            <option>3</option>
+                            <option>4</option>
+                            <option>5 Strongly Agree</option>
+                    </select><br>
+                </div>
+                </div>
+
+
+                <button type="submit" class="btn btn-warning" id="submit">Submit</button>
+        </div>
+    </form> <br><br>
+</div>
+
+
+
+
+
+      
+      <!-- Modal -->
+<div class="modal" id="modal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+        <div class="modal-header">
+            <h5 class="modal-title" id="modalLabel">Modal title</h5>
+            <button id="closeButton" type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>
+
+<script type="text/javascript">
+
+
+const modal = document.querySelector("#modal");
+const modalLabel = document.querySelector("#modalLabel");
+const closeButton = $("#closeButton");
+
+closeButton.on("click", function(event) {
+    modal.style.display = "none";
+})
+
+// on click event to push the results of the user input into a new object that is pushed to friends.js
+$("#submit").on("click", function(event) {
+    event.preventDefault();
+    // Here we grab the form elements
+    const name = $("#name").val().trim();
+    const photo = $("#photo").val().trim();
+    const surveyResults = {
+      Q1: $("#q1").val().trim(),
+      Q2: $("#q2").val().trim(),
+      Q3: $("#q3").val().trim(),
+      Q4: $("#q4").val().trim(),
+      Q5: $("#q5").val().trim(),
+      Q6: $("#q6").val().trim(),
+      Q7: $("#q7").val().trim(),
+      Q8: $("#q8").val().trim(),
+      Q9: $("#q9").val().trim(),
+      Q10: $("#q10").val().trim()      
+    };
+    const resultsArray = [];
+
+    for (const key in surveyResults) {
+        if (surveyResults.hasOwnProperty(key)) {
+            let value = surveyResults[key].split(" ")[0];
+            resultsArray.push(value);         
+        }
+    }
+
+    var total = 0;
+
+    for (let i = 0; i < resultsArray.length; i++) {        
+        total += Number(resultsArray[i]);        
+    }
+
+    const newEntry = {
+        name: name,
+        photo: photo,
+        scores: resultsArray,
+        totalScore: total
+    }
+    $.post("http://localhost:8080/api/friends", newEntry, (res) => {
+        modalLabel.textContent = "Your closest Friend Match is: " + res;
+        modal.style.display = 'block';
+    });
+
+
+})
+
+
+</script>
